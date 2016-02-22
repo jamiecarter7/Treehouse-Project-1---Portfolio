@@ -1,0 +1,273 @@
+/* Global Layout Set-up */
+* { 
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #222;
+  background: #f7f5f0;
+}
+/* Link Styles */
+
+a {
+  text-decoration: none;
+  color: #999;
+}
+a:hover {
+  color: #6633ff;
+}
+
+/* Section Styles */
+
+.main-nav {
+  width: 100%;
+  background: rgba(255, 255, 255, .96);
+  min-height: 30px;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  box-shadow: 1px 1px 0 0 #eee;
+  z-index: 999;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  font-weight: 700;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav .name {
+    display: block;
+    margin-right: auto;
+    color: #222;
+}
+.nav li {
+  padding: 5px 10px 10px 10px;
+}
+.nav a {
+  transition: all .5s;
+}
+.nav a:hover {
+  color: #31708f;
+}
+
+header {
+  text-align: center;
+  background: url('images/headerbg.jpg') no-repeat top center ;
+  background-size: cover;
+  overflow: hidden;
+  padding: 100px 80px 50px;
+}
+header {
+  line-height: 1.5;
+}
+header .profile-image {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0px 12px 4px -8px rgba(0,0,0,0.55);
+  transition: all .5s;
+}
+header .profile-image:hover {
+  box-shadow: 3px 20px 22px -10px rgba(0,0,0,0.35);
+  transform: scale(1.4) rotate(3deg);
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+.tag {
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  display: table;
+  margin: 5px auto;
+} 
+.location {
+  color: #fff;
+}
+.title {
+  font-size: 3em;
+}
+.card {
+  margin: 30px auto;
+  padding: 20px 40px 40px;
+  max-width: 520px;
+  text-align: left;
+  background: #fff;
+  border-radius: 6px;
+  transition: all .5s;
+  box-shadow: 0px 1px 0px 0px #ccc;
+  z-index: 1;
+}
+.card:hover {
+  box-shadow:  0 4px 0px 0px #0399ff, 0px 8px 3px -2px #ccc;
+  transform: translate(0, -3px);
+}
+
+.card a {
+  display: block;
+  color: #fff;
+  margin: 8px 40px 0;
+  border-radius: 6px;
+  text-align: center;
+  padding: 14px 20px;
+  background: #06BCFF;
+  background-image: linear-gradient(#07C9FF, #0399FF);
+  box-shadow: 0px 3px 0px 0px #0070BD;
+  transition: all .1s;
+}
+
+.card a:hover {
+  background: #06BCFF;
+  box-shadow: 0px 4px 0px 0px #0070BD;
+  transform: translate(0, -1px)
+}
+
+.card a:active {
+  border-bottom: 0px;
+  box-shadow: 0px 1px 0px 0px #0070BD;
+  transform: translate(0, 2px);
+  transition: all .3s;
+}
+
+.portfolio {
+  padding: 0 0 40px;
+}
+
+.portfolio-paragraph{
+  padding: 15px 40px 4px;
+}
+
+.logo {
+  border-radius: 6px 6px 0 0;
+  background: #444;
+  padding:15px 15px 5px 15px;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.logo img {
+  height:100px;
+  width:100px;
+  border-radius: 6px;
+}
+
+.logo p {
+  font-family: helvetica, arial;
+  margin: 5px;
+  color: #fff;
+}
+
+.parallel {
+  background: url('images/parallelbg.svg') no-repeat center center ;
+}
+
+footer {
+  width: 100%;
+  min-height: 30px;
+  padding: 20px 0 40px 20px;
+}
+
+footer .copyright {
+  top: -8px;
+  font-size: .75em;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+}
+
+a.social {
+  display: inline-block;
+  text-indent: -9999px;
+  margin-left: 5px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  opacity: .4;
+  transition: all .5s;
+}
+a.twitter {
+  background-image: url(images/twitter.svg);
+}
+a.linkedin {
+  background-image: url(images/linkedin.svg);
+}
+a.github {
+  background-image: url(images/github.svg);
+}
+a.social:hover {
+  opacity: 1;
+}
+.clearfix {
+  clear: both;
+}
+.flex {
+  padding: 20px;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 720px) {
+  
+  .flex {
+      display: -ms-flexbox;      /* TWEENER - IE 10 */
+      display: flex; 
+      max-width: 1200px;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 0 auto;
+  }
+
+ /* header {
+    min-height: 470px;
+  }*/
+
+  .nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+
+
+  main {
+    padding-top: 20px;
+  }
+
+  main p {
+    line-height: 1.6em;
+  }
+
+  footer {
+    font-size: 1.3em;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+
+  .card {
+    margin: 30px;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+  .title {
+  font-size: 5em;
+}
+}
+
